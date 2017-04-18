@@ -115,6 +115,14 @@ public let HeimdallrErrorNotAuthorized = 2
             completion(result.map { _ in return })
         }
     }
+    
+    //-- App Shack
+    open func requestAccessToken(grant: OAuthAuthorizationGrant, completion: @escaping (Result<OAuthAccessToken, NSError>) -> Void) {
+        requestAccessToken(grant: grant) { result in
+            completion(result.map { _ in return })
+        }
+    }
+    //--
 
     /// Requests an access token with the given authorization grant.
     ///
